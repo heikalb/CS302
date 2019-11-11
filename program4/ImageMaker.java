@@ -1,3 +1,30 @@
+///////////////////////////////////////////////////////////////////////////////
+//ALL STUDENTS COMPLETE THESE SECTIONS
+//Title:            Image Maker
+//Files:            ImageMaker.java, Shape.java
+//Semester:         CS302 Fall 2014
+//
+//Author:           Lexi Oxborough
+//Email:            oxborough@wisc.edu
+//CS Login:         oxborough
+//Lecturer's Name:  Debra Deppeler
+//Lab Section:      314
+//
+////////////////////PAIR PROGRAMMERS COMPLETE THIS SECTION ////////////////////
+//CHECK ASSIGNMENT PAGE TO see IF PAIR-PROGRAMMING IS ALLOWED
+//If allowed, learn what PAIR-PROGRAMMING IS,
+//choose a partner wisely, and complete this section.
+//
+//Pair Partner:     Heikal Badrulhisham
+//Email:            heikal@cs.wisc.edu
+//CS Login:         heikal
+//Lecturer's Name:  Laura Legault
+//Lab Section:      345
+//
+//STUDENTS WHO GET HELP FROM ANYONE OTHER THAN THEIR PARTNER
+//Credits:          (list anyone who helped you write your program)
+////////////////////////////80 columns wide //////////////////////////////////
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -12,15 +39,18 @@ public class ImageMaker
 {
 	public static int getInput(int min, int max, String reprompt, Scanner scan)
 	{
-		int input = 0;	//User's input.
-		boolean inputAccepted = false;	//Whether a valid input has been given 
+		//User's input
+		int input = 0;
+		//Whether a valid input has been given
+		boolean inputAccepted = false;
 		
 		//Check whether input is valid before accepting it
 		do
 		{
 			if(scan.hasNextInt())
 			{
-				int temp = scan.nextInt();	//Temporary holder of user's int.
+				//Temporary holder of user's int.
+				int temp = scan.nextInt();
 				if(temp >= min && temp <=max)
 				{
 					input = temp;
@@ -39,8 +69,7 @@ public class ImageMaker
 		
 		return input;
 	}
-	
-	
+
 	public static File chooseBackground(ArrayList<File> bG, Scanner scan) 
 	throws IOException
 	{
@@ -81,7 +110,7 @@ public class ImageMaker
 				System.out.print("Enter filename: ");
 				
 				fileName = scan.nextLine();
-				//temporary file, for the purpose of checking whether user's
+				//Temporary file, for the purpose of checking whether user's
 				//file and file name are valid:
 				File userFile = new File(fileName);
 				
@@ -475,7 +504,5 @@ public class ImageMaker
 			}
 				
 		}while(!quit);
-		
 	}
-
 }
